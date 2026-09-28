@@ -5,6 +5,7 @@ import 'screens/profile.dart';
 
 class Root extends StatefulWidget {
   final String username; 
+  
 
   const Root({super.key, required this.username});
 
@@ -14,7 +15,11 @@ class Root extends StatefulWidget {
 
 class _RootState extends State<Root> {
   int _selectedIndex = 0;
-  final List<String> _title = ["Destinasi Wisata", "Profile"];
+  final List<String> _title = 
+  [
+    "Destinasi Wisata", 
+    "Profile"
+  ];
     // final List<String> _title = ["List Destinasi", "Profile"];
 
 
@@ -36,7 +41,7 @@ class _RootState extends State<Root> {
       appBar: AppBar(
         leading: Icon(Icons.place),
         title: Text(_title[_selectedIndex]),
-        backgroundColor: Colors.amber,
+        backgroundColor: const Color.fromARGB(255, 248, 230, 255),
       ),
       body: pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(

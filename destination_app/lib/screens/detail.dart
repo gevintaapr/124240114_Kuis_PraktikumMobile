@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/destinationModels.dart';
 
+
 class Detail extends StatefulWidget {
   final DestinationModel dest;
 
@@ -10,6 +11,7 @@ class Detail extends StatefulWidget {
   @override
   State<Detail> createState() => _DetailState();
 }
+
 
 class _DetailState extends State<Detail> {
   bool _isFavorite = false;
@@ -108,23 +110,12 @@ class _DetailState extends State<Detail> {
                   Color.fromARGB(255, 248, 42, 135),
                   "Kategori: ${widget.dest.category}",
                 ),
-                // _buildInfoChip(
-                //   Icons.pages_rounded,
-                //   Colors.green,
-                //   "${widget.book.pages} hlm",
-                // ),
-                // _buildInfoChip(
-                //   Icons.calendar_month,
-                //   const Color.fromARGB(255, 182, 114, 202),
-                //   "${widget.book.year}",
-                // ),
               ],
             ),
             const SizedBox(height: 20),
             const Divider(),
             const SizedBox(height: 10),
 
-            // Informasi Detail Tambahan (Penerbit, Link URL)
             Card(
               elevation: 1,
               shape: RoundedRectangleBorder(
@@ -166,7 +157,7 @@ class _DetailState extends State<Detail> {
             ),
             const SizedBox(height: 20),
 
-            // Deskripsi Buku
+            // Deskripsi 
             Text(
               "Apa sih itu ${widget.dest.name}?",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -188,7 +179,7 @@ class _DetailState extends State<Detail> {
     );
   }
 
-  // Helper widget untuk Chip Info Singkat
+  //  Chip Info Singkat
   Widget _buildInfoChip(IconData icon, Color color, String label) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
@@ -208,7 +199,6 @@ class _DetailState extends State<Detail> {
       ),
     );
   }
-
   // ini buatt widget untuk Info Row di Card
   Widget _buildInfoRow(IconData icon, String title, String value) {
     return Row(
