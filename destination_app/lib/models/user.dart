@@ -7,6 +7,5 @@ class User {
 }
 
 List<User> users = [
-  User(username: "gevi", password: "123", name: "Gevinta Aprilia"),
-  User(username: "ayu", password: "124", name: "Ayu Hanifa"),
+  User(username: "gevi", password: "114", name: "Gevinta Aprilia"),
 ];
